@@ -1,0 +1,18 @@
+<div class="container mt-4">
+  <h3 class="mb-3 text-primary">Nos Produits</h3>
+
+  <div class="row g-3">
+
+    <div class="col-md-3" *ngFor="let p of products">
+      <div class="card shadow-sm">
+        <img [src]="p.img" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">{{ p.name }}</h5>
+          <p class="text-success fw-bold">{{ p.price }} DHS</p>
+          <button class="btn btn-primary w-100">Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container mt-4">
+  <h3 class="text-primary mb-3">Panier</h3>
+
+  <div class="list-group">
+    <div *ngFor="let item of items" class="list-group-item d-flex justify-content-between">
+      <div>
+        <strong>{{ item.name }}</strong><br>
+        <small>Quantité : {{ item.qty }}</small>
+      </div>
+      <div class="fw-bold">{{ item.price * item.qty }} DHS</div>
+    </div>
+  </div>
+
+  <div class="alert alert-success mt-3">
+    Total : <strong>{{ total }} DHS</strong>
+  </div>
+</div>
