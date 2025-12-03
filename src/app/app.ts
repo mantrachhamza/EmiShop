@@ -5,6 +5,7 @@ import {Footer} from './components/footer/footer';
 import {Auth} from './components/auth/auth';
 import {Panier} from './components/panier/panier';
 import {ListeProducts} from './components/liste-products/liste-products';
+import {SearchBar} from './components/search-bar/search-bar';
 
 @Component({
   selector: 'app-root',

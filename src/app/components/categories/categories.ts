@@ -15,6 +15,7 @@ export class Categories {
     { name: 'Déjeuner', icon: '🍔' },
     { name: 'Dinner', icon: '🍱' },
     { name: 'Ftour-Ramadan', icon: '☪️' },
-    { name: 'Shour-Ramadan', icon: '☪️' },
+    { name: 'Acha-Ramadan', icon: '🕌' },
+    { name: 'Macaron', icon: '🪖' },
   ];
 }
