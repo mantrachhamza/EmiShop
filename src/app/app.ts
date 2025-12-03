@@ -1,9 +1,17 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Header} from './components/header/header';
+import {Categories} from './components/categories/categories';
+import {Footer} from './components/footer/footer';
+import {Auth} from './components/auth/auth';
+import {Panier} from './components/panier/panier';
+import {ListeProducts} from './components/liste-products/liste-products';
+import {SearchBar} from './components/search-bar/search-bar';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [Header, Categories, Footer,
+    Auth, Panier,
+    ListeProducts],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

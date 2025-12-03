@@ -1,0 +1,81 @@
+<div class="container mt-4">
+  <h2 class="mb-4">Product List</h2>
+
+  <div class="row">
+    <div
+      class="col-md-4 mb-4"
+      *ngFor="let product of productList"
+    >
+      <div class="card shadow-sm h-100">
+
+        <!-- Image -->
+        <div class="text-center p-3">
+          <img
+            [src]="product.images"
+            alt="{{ product.title }}"
+            class="img-fluid rounded"
+            style="max-height: 180px; object-fit: contain;"
+          />
+        </div>
+
+        <!-- Title -->
+        <div class="card-header bg-primary text-white">
+          <h5 class="card-title mb-0">{{ product.title }}</h5>
+        </div>
+
+        <div class="card-body">
+          <!-- Description -->
+          <p class="card-text text-muted">
+            {{ product.description }}
+          </p>
+
+          <!-- Price -->
+          <p class="fw-bold mb-1">
+            Price:
+            <span class="text-success">{{ product.price }} dhs</span>
+          </p>
+
+          <!-- Discount -->
+          <p class="mb-1">
+            Discount:
+            <span class="badge bg-warning text-dark">
+              -{{ product.discountPercentage }}%
+            </span>
+          </p>
+
+          <!-- Rating -->
+          <p class="mb-1">
+            Rating:
+            <span class="badge bg-info">{{ product.rating }} ★</span>
+          </p>
+
+          <!-- Stock -->
+          <p class="mb-3">
+            Stock:
+            <span
+              class="badge"
+              [ngClass]="product.stock > 10 ? 'bg-success' : 'bg-danger'"
+            >
+              {{ product.stock }}
+            </span>
+          </p>
+
+          <!-- Tags -->
+          <div class="mt-2">
+            <span
+              *ngFor="let tag of product.tags"
+              class="badge bg-secondary me-1"
+            >
+              {{ tag }}
+            </span>
+          </div>
+        </div>
+
+        <div class="card-footer bg-light">
+          <button class="btn btn-primary w-100">View Details</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
